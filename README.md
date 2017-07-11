@@ -1,32 +1,60 @@
-# gh-pages demo
+# gh-pages demo service
 
-gh-pages (demo)[https://shanegibney.github.io/angular-service-example/]
-# AngularServiceProject
+gh-pages demo [https://shanegibney.github.io/angular-service-example/]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+# Create the project with abgular-cli
 
-## Development server
+Using Angular-cli a new project was created with,
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+$ ng new angular-service-project
 
-## Code scaffolding
+# Create a service with angular-cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+The service was created
 
-## Build
+$ ng g s example-service
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+where 'g' is a shortcut for 'generate' and 's' is a shortcut for 'service'.
 
-## Running unit tests
+The actual service is at: example-service-service.ts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { Injectable } from '@angular/core';
 
-## Running end-to-end tests
+@Injectable()
+export class ExampleServiceService {
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+  someMethod(){
+    return "Heya!";
+  }
+  constructor() { }
 
-## Further help
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# angular-service-example
+Then make the changes to app.component.ts
+
+import { Component, OnInit } from '@angular/core'; // added OnInit
+import { ExampleServiceService } from './example-service.service' // added this import
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  providers: [ExampleServiceService]
+})
+export class AppComponent {
+  title = 'app works!';
+  example: string;
+  constructor(private _exampleServiceService: ExampleServiceService){ // added this constructor
+  }
+  // added this ngOnInit method
+  ngOnInit(){
+ this.example = this._exampleServiceService.someMethod();
+  }
+}
+
+Get example into the app.component.html file,
+
+<h1>
+  {{ title }}
+</h1>
+<h3>{{ example }}</h3>

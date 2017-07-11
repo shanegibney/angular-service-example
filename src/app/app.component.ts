@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ExampleServiceService } from './example-service.service'
+import { Component, OnInit } from '@angular/core'; // added OnInit
+import { ExampleServiceService } from './example-service.service' // added this import
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,9 @@ import { ExampleServiceService } from './example-service.service'
 export class AppComponent {
   title = 'app works!';
   example: string;
-  constructor(private _exampleServiceService: ExampleServiceService){
+  constructor(private _exampleServiceService: ExampleServiceService){ // added this constructor
   }
+  // added this ngOnInit method
   ngOnInit(){
  this.example = this._exampleServiceService.someMethod();
   }
