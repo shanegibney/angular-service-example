@@ -64,3 +64,41 @@ Get example into the app.component.html file,
 </h1>
 <h3>{{ example }}</h3>
 ```
+
+To make this service available to all components, cut the line
+
+```
+  providers: [ExampleServiceService]
+  ```
+
+from app.component.ts and put it is app.module.ts and also make it available with
+
+```
+import { ExampleServiceService } from './example-service.service'
+```
+
+app.module.ts should look like this,
+
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { ExampleServiceService } from './example-service.service'
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [ExampleServiceService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
