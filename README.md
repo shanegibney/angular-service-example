@@ -1,10 +1,10 @@
 Demo to create the simplest possible service.
 
-Checkout (https://youtu.be/h5tB_kvuQO8)[Understanding Angular 2 Services - Tutorial]
+Checkout [Understanding Angular 2 Services - Tutorial](https://youtu.be/h5tB_kvuQO8)
 
 # gh-pages demo service
 
-gh-pages demo [https://shanegibney.github.io/angular-service-example/]
+See the demo on [gh-pages](https://shanegibney.github.io/angular-service-example/)
 
 # Create the project with abgular-cli
 
