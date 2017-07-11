@@ -1,3 +1,6 @@
+# gh-pages demo
+
+gh-pages (demo)[https://shanegibney.github.io/angular-service-example/]
 # AngularServiceProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
