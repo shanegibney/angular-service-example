@@ -18,6 +18,7 @@ where 'g' is a shortcut for 'generate' and 's' is a shortcut for 'service'.
 
 The actual service is at: example-service-service.ts
 
+```
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -29,9 +30,11 @@ export class ExampleServiceService {
   constructor() { }
 
 }
+```
 
 Then make the changes to app.component.ts
 
+```
 import { Component, OnInit } from '@angular/core'; // added OnInit
 import { ExampleServiceService } from './example-service.service' // added this import
 
@@ -51,6 +54,7 @@ export class AppComponent {
  this.example = this._exampleServiceService.someMethod();
   }
 }
+```
 
 Get example into the app.component.html file,
 
