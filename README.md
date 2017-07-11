@@ -1,3 +1,7 @@
+Demo to create the simplest possible service.
+
+Checkout (https://youtu.be/h5tB_kvuQO8)[Understanding Angular 2 Services - Tutorial]
+
 # gh-pages demo service
 
 gh-pages demo [https://shanegibney.github.io/angular-service-example/]
@@ -10,7 +14,7 @@ $ ng new angular-service-project
 
 # Create a service with angular-cli
 
-The service was created
+The service was created with,
 
 $ ng g s example-service
 
