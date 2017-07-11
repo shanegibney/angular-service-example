@@ -54,7 +54,9 @@ export class AppComponent {
 
 Get example into the app.component.html file,
 
+```HTML
 <h1>
   {{ title }}
 </h1>
 <h3>{{ example }}</h3>
+```
